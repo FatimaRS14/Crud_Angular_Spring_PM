@@ -5,5 +5,5 @@ export class Mascota{
     nombreMascota !: String;
     especie !: String;
     edadMascota !: number;
-    propietarioId !: Propietario;
+    propietarioId !: Propietario | null;
 }

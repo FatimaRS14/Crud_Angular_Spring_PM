@@ -29,4 +29,9 @@ export class ListarMascota implements OnInit{
       this.router.navigate(['guardarM']);
     }
 
+    editarM(idMascota: number){
+      localStorage.setItem("idMascota", idMascota.toString());
+      this.router.navigate(['editarM']);
+    }
+
 }

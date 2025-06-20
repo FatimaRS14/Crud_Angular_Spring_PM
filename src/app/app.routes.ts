@@ -4,6 +4,7 @@ import { Guardar } from './Componente/guardar/guardar';
 import { Editar } from './Componente/editar/editar';
 import { ListarMascota } from './Componente/listar-mascota/listar-mascota';
 import { GuardarMascota } from './Componente/guardar-mascota/guardar-mascota';
+import { EditarMascota } from './Componente/editar-mascota/editar-mascota';
 
 export const routes: Routes = [
     //Reutas para navegar a los diferentes componentes y vistas
@@ -26,5 +27,10 @@ export const routes: Routes = [
     {
          path: 'guardarM',
          component:GuardarMascota
+    },
+    {
+        path: 'editarM',
+        component:EditarMascota
     }
+
 ];

@@ -38,7 +38,7 @@ ngOnInit(): void {
   //Esto es para convertir al formato que necesita el json
   propietarioIdSolo: number = 0;
  guardarM() {
-  // Validar que el propietario seleccionado sea válido
+  // Esto es para validar que el propietario seleccionado sea válido
   if (!this.propietarioIdSolo || this.propietarioIdSolo <= 0) {
     Swal.fire({
       title: "Error",
@@ -49,7 +49,6 @@ ngOnInit(): void {
     return;
   }
 
-  // Formar el objeto completo esperado por el backend
   this.m.propietarioId = { idPropietario: this.propietarioIdSolo };
 
   this.service.guardarM(this.m).subscribe({

@@ -24,7 +24,7 @@
                         <td>{{m.especie}}</td>
                         <td>{{m.edadMascota}}</td>
                         <td>{{ m.propietarioId?.nombre }}</td>
-                        <td><button class="btn btn-outline-warning">Editar</button></td>
+                        <td><button class="btn btn-outline-warning" (click) ="editarM(m.idMascota)">Editar</button></td>
                         <td><button class="btn btn-outline-danger">Eliminar</button></td>
                     </tr>
                 }

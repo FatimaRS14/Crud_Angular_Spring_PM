@@ -39,5 +39,13 @@ export class Ws {
     return this.http.post<String>(this.urlm + "/guardar", m);
   }
 
+  buscarM(m: Mascota){
+    return this.http.post<Mascota>(this.urlm + "/buscar", m);
+  }
+
+  editarM(m: Mascota){
+    return this.http.put<String>(this.urlm + "/editar", m);
+  }
+
 
 }
