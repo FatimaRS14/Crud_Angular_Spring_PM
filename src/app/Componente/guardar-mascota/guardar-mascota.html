@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">
+                Nueva mascota
+            </h2>
+            <form>
+                
+                    <legend>Registro de mascotas</legend>
+                    <div class="mb-3">
+                        <label for="idMascota" class="form-label">ID</label>
+                        <input type="text" name="idMascota" class="form-control" placeholder="Ingresa el id" [(ngModel)]="m.idMascota">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombreMascota" class="form-label">NOMBRE</label>
+                        <input type="text" name="nombreMascota" class="form-control" placeholder="Ingresa el nombre de la mascota"[(ngModel)]="m.nombreMascota">
+                    </div>
+                    <div class="mb-3">
+                        <label for="especie" class="form-label">ESPECIE</label>
+                        <input type="text" name="especie" class="form-control" placeholder="Ingresa la especie"[(ngModel)]= "m.especie">
+                    </div>
+                    <div class="mb-3">
+                        <label for="edadMascota" class="form-label">EDAD</label>
+                        <input type="text" name="edadMascota" class="form-control" placeholder="Ingresa la edad de la mascota"[(ngModel)]= "m.edadMascota">
+                    </div>                   
+                    <div class="mb-3">
+                    <label for="propietarioId" class="form-label">PROPIETARIO</label>
+                    <select
+                        name="propietarioId"
+                        class="form-control"
+                        [(ngModel)]="propietarioIdSolo"
+                        required
+                    >
+                        <option value="0" disabled selected>Selecciona un propietario</option>
+                        <option *ngFor="let p of propietarios" [value]="p.idPropietario">
+                        {{ p.nombre }}
+                        </option>
+                    </select>
+                    </div>
+                    <button class="btn btn-primary btn-lg" type="button" (click)="guardarM()">Guardar</button>
+                
+                </form>
+        </div>
+    </div>
+</div>

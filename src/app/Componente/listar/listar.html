@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="card-header">
+        <div>
+            <h2>Listar propietarios</h2>
+        </div>
+         <button class="btn btn-outline-dark" type="button" (click)="nuevo()">Nuevo registro</button>
+        <div>
+           
+            <div class="card-body">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NOMBRE</th>
+                            <th>EDAD</th>
+                            <th>GENERO</th>
+                            <th>EDITAR</th>
+                            <th>ELIMINAR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for(p of propietarios; track p.idPropietario){
+                            <tr>
+                                <td>{{p.idPropietario}}</td>
+                                <td>{{p.nombre}}</td>
+                                <td>{{p.edad}}</td>
+                                <td>{{p.genero}}</td>
+                                <td><button class="btn btn-outline-warning" (click)="editar(p.idPropietario)">Editar</button></td>
+                                <td><button class="btn btn-outline-danger">Eliminar</button></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

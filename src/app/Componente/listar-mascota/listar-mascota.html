@@ -1,0 +1,35 @@
+<div class="conteiner">
+    <div class="card-header">
+        <h2>Listar Mascotas</h2>
+    </div>
+    <div class="d-grid gap-2 d-md-block">
+        <button class="btn btn-outline-dark" type="button" (click)="guardarM()">Nuevo registro</button>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered table-hover" >
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>ESPECIE</th>
+                    <th>EDAD</th>
+                    <th>PROPIETARIO</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(m of mascotas; track m.idMascota){
+                    <tr>
+                        <td>{{m.idMascota}}</td>
+                        <td>{{m.nombreMascota}}</td>
+                        <td>{{m.especie}}</td>
+                        <td>{{m.edadMascota}}</td>
+                        <td>{{ m.propietarioId?.nombre }}</td>
+                        <td><button class="btn btn-outline-warning">Editar</button></td>
+                        <td><button class="btn btn-outline-danger">Eliminar</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
