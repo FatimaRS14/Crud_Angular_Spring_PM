@@ -31,6 +31,11 @@ export const routes: Routes = [
     {
         path: 'editarM',
         component:EditarMascota
+    },
+    {
+        path: 'eliminarM',
+        component:ListarMascota
     }
+
 
 ];

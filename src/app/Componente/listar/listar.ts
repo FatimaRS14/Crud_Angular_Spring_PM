@@ -16,7 +16,7 @@ export class Listar implements OnInit{
   ngOnInit(): void {
     this.activarPeticionListrar();
   }
-
+  p = new Propietario();
   //Instanciar lista
   propietarios !: Propietario[];
   //metodo que envia la peticion al servidor
@@ -35,6 +35,13 @@ export class Listar implements OnInit{
    editar(idPropietario: number){
     localStorage.setItem("idPropietario", idPropietario.toString());
     this.router.navigate(['editar']);
+   }
+
+   eliminar(idPropietario: number){
+      this.p.idPropietario = idPropietario;
+      this.service.eliminarP(this.p).subscribe(respuesta =>{
+        console.log(JSON.stringify(respuesta));
+      });
    }
 
 }

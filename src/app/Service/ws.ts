@@ -28,6 +28,12 @@ export class Ws {
     return this.http.put<String>(this.url + "/editar", p);
   }
 
+  eliminarP(p: Propietario){
+    return this.http.delete<void>(this.url + "/eliminar", {
+      body: p
+    });
+  }
+
   urlm = "http://localhost:8010/api/mascota";
 
   listarM(){
@@ -46,6 +52,11 @@ export class Ws {
   editarM(m: Mascota){
     return this.http.put<String>(this.urlm + "/editar", m);
   }
+
+  eliminarM(m: { idMascota: number }) {
+  return this.http.delete<void>(this.urlm + "/eliminar", { body: m });
+  }
+
 
 
 }

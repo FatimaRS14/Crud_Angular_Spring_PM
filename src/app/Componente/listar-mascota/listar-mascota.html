@@ -1,10 +1,12 @@
 <div class="conteiner">
     <div class="card-header">
-        <h2>Listar Mascotas</h2>
-    </div>
+       <div>
+         <h2>Listar Mascotas</h2>
+       </div>
     <div class="d-grid gap-2 d-md-block">
         <button class="btn btn-outline-dark" type="button" (click)="guardarM()">Nuevo registro</button>
     </div>
+    <div>
     <div class="card-body">
         <table class="table table-bordered table-hover" >
             <thead>
@@ -25,11 +27,13 @@
                         <td>{{m.edadMascota}}</td>
                         <td>{{ m.propietarioId?.nombre }}</td>
                         <td><button class="btn btn-outline-warning" (click) ="editarM(m.idMascota)">Editar</button></td>
-                        <td><button class="btn btn-outline-danger">Eliminar</button></td>
+                        <td><button class="btn btn-outline-danger" (click) = "eliminarM(m.idMascota)">Eliminar</button></td>
                     </tr>
                 }
             </tbody>
         </table>
+       </div>
     </div>
+   </div>
 </div>
 
